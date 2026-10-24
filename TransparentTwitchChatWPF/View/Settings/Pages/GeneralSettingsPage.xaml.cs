@@ -31,6 +31,7 @@ public partial class GeneralSettingsPage : UserControl
         this.cbInteraction.IsChecked = App.Settings.GeneralSettings.AllowInteraction;
         this.cbCheckForUpdates.IsChecked = App.Settings.GeneralSettings.CheckForUpdates;
         this.cbMultiInstance.IsChecked = App.Settings.GeneralSettings.AllowMultipleInstances;
+        this.cbShowConnectionStatus.IsChecked = App.Settings.GeneralSettings.ShowConnectionStatusInChat;
 
         this.hotkeyInputToggleBorders.Hotkey = App.Settings.GeneralSettings.ToggleBordersHotkey;
         this.hotkeyInputToggleInteractable.Hotkey = App.Settings.GeneralSettings.ToggleInteractableHotkey;
@@ -47,6 +48,7 @@ public partial class GeneralSettingsPage : UserControl
         App.Settings.GeneralSettings.HideTaskbarIcon = this.cbTaskbar.IsChecked ?? false;
         App.Settings.GeneralSettings.AllowInteraction = this.cbInteraction.IsChecked ?? false;
         App.Settings.GeneralSettings.CheckForUpdates = this.cbCheckForUpdates.IsChecked ?? false;
+        App.Settings.GeneralSettings.ShowConnectionStatusInChat = this.cbShowConnectionStatus.IsChecked ?? false;
 
         // Hotkeys
         App.Settings.GeneralSettings.ToggleBordersHotkey = hotkeyInputToggleBorders.Hotkey;

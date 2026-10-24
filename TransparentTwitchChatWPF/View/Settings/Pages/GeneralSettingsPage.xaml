@@ -85,6 +85,21 @@
                     Unchecked="cbMultiInstance_Unchecked"
                     />
 
+                <CheckBox
+                    Name="cbShowConnectionStatus"
+                    Content="Show Twitch Connection Status Messages In Chat"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Margin="20,10,0,3"
+                    />
+                <TextBlock
+                    Text="*Note: Routine EventSub connect/reconnect messages. Warnings about an expired login or a connection that can't be restored are always shown."
+                    FontStyle="Italic"
+                    TextWrapping="Wrap"
+                    HorizontalAlignment="Left"
+                    VerticalAlignment="Top"
+                    Margin="40,0,20,5"/>
+
                 <Rectangle Height="2" Fill="Gray" Margin="10 5 25 5" />
 
                 <Label Margin="15,5,0,0" HorizontalAlignment="Left" Content="Global Hotkeys" FontWeight="Bold" />

@@ -287,7 +287,7 @@ public class TwitchService : IHostedService, IDisposable
     private async Task OnWebsocketConnected(object sender, WebsocketConnectedArgs e)
     {
         _logger.LogInformation($"Websocket {_eventSubWebsocketClient.SessionId} connected!");
-        Growl.Info("Twitch EventSub connection established successfully.");
+        Growl.ConnectionInfo("Twitch EventSub connection established successfully.");
 
         if (!e.IsRequestedReconnect)
         {
@@ -375,7 +375,7 @@ public class TwitchService : IHostedService, IDisposable
     private async Task OnWebsocketReconnected(object sender, EventArgs e)
     {
         _logger.LogInformation($"Websocket {_eventSubWebsocketClient.SessionId} reconnected");
-        Growl.Info("Twitch EventSub connection re-established successfully.");
+        Growl.ConnectionInfo("Twitch EventSub connection re-established successfully.");
     }
 
     private async Task OnErrorOccurred(object sender, ErrorOccuredArgs e)
@@ -383,7 +383,7 @@ public class TwitchService : IHostedService, IDisposable
         //LogService.Instance.ChannelChatStatus.IsConnected = true;
 
         _logger.LogInformation($"Websocket {_eventSubWebsocketClient.SessionId} - Error occurred!\n{e.Message}\n{e.Exception}");
-        Growl.Error($"Twitch EventSub Error: {e.Message}");
+        Growl.ConnectionError($"Twitch EventSub Error: {e.Message}");
     }
 
     // --- Cleanup Methods -------------------------------------------------------------
